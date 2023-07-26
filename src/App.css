@@ -44,10 +44,11 @@
 }
 .card{
   border: 2px solid black;
-  margin:5%;
-  width: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction:column;
+  margin: 4.5%;
 
-  height: auto;
 }
 .header{
   box-sizing: border-box;
