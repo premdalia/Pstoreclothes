@@ -36,3 +36,65 @@
     transform: rotate(360deg);
   }
 }
+.App2{
+  display: Flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+.card{
+  border: 2px solid black;
+  margin:5%;
+  width: auto;
+
+  height: auto;
+}
+.header{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.nav_links{
+  list-style: none;
+  text-decoration: none;
+  
+
+}
+.mainsearch{
+  width: 700px;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding:0 20px ;
+}
+.detailcard{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black; 
+  justify-content:first baseline;
+}
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden; /* Hide any overflow */
+  
+}
+
+.carousel-inner,
+.carousel-item {
+   /* Use flexbox to center the images vertically */
+  align-items: center; /* Vertically center the images */
+  justify-content: center; /* Horizontally center the images */
+  max-height: 700px; /* Set the maximum height for the carousel items */
+}
+
+.carousel-item img {
+  object-fit: contain; /* Ensure the image scales appropriately to fit the container */
+  max-height: 100%; /* Set the maximum height of the image to the height of the carousel item */
+  max-width: 100%; /* Set the maximum width of the image to the width of the carousel item */
+}
