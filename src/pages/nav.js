@@ -25,6 +25,9 @@ function Nav() {
             <li>
               <Link to="/mobiles">Mobiles</Link>
             </li>
+            <li>
+              <Link to="/clothes">Clothes</Link>
+            </li>
           </ul>
         </nav>
      
