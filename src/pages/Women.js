@@ -2,12 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import '../App.css';
 import { Link } from "react-router-dom";
-function Clothes() {
+function Women() {
     const [clothesdata,setCothesdata]=useState([]);
 
     useEffect(()=>{
         axios
-        .get("http://localhost:3000/api/data?sub=clothes&g=man")
+        .get("http://localhost:3000/api/data?sub=clothes&g=woman")
         .then((response)=>{
             setCothesdata(response.data);
         })
@@ -31,4 +31,4 @@ function Clothes() {
     );
     
 }
-export default Clothes;
+export default Women;

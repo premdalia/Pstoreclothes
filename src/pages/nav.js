@@ -19,14 +19,17 @@ function Nav() {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/shoes">Shoes</Link>
             </li>
             <li>
               <Link to="/mobiles">Mobiles</Link>
+            </li> */}
+            <li>
+              <Link to="/Men">Men</Link>
             </li>
             <li>
-              <Link to="/clothes">Clothes</Link>
+              <Link to="/Women">women</Link>
             </li>
           </ul>
         </nav>
