@@ -1,0 +1,15 @@
+*{
+
+    background-color: rgb(212, 242, 239);
+    
+}
+.App2{
+
+    display: flex;
+    justify-content: center;
+}
+
+d-block w-100{
+
+    background-color: antiquewhite;
+}

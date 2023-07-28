@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,6 +23,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.mainsearch{
+
+  background-color: white;
+}
+
+
+.but{
+
+  background-color: rgb(253, 253, 253);
+  /* color: white; */
 }
 
 .App-link {
@@ -37,10 +49,15 @@
   }
 }
 .App2{
+  background-color: azure;
   display: Flex;
   flex-wrap: wrap;
   flex-direction: row;
   text-align: center;
+}
+
+.app2 ,h3{
+  background-color: white;
 }
 .card{
   border: 2px solid black;
@@ -50,6 +67,9 @@
   margin: 4.5%;
 
 }
+
+
+
 .header{
   box-sizing: border-box;
   display: flex;
@@ -88,6 +108,8 @@
 
 .carousel-inner,
 .carousel-item {
+  
+  
    /* Use flexbox to center the images vertically */
   align-items: center; /* Vertically center the images */
   justify-content: center; /* Horizontally center the images */

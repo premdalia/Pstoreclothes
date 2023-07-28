@@ -9,6 +9,7 @@ import Search from './pages/Search';
 import Details from './pages/Details';
 import Clothes from './pages/clothes';
 import Women from './pages/Women';
+import './pages/all.css';
 
 function App() {
   return (
