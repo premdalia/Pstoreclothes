@@ -19,27 +19,31 @@ function Home() {
 
     return(
         <>
-        <Carousel
-        interval={1500}
-        pause="hover"
-        wrap={true}
-        onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
-      >
-        {shoesdata.map((items) => (
-          <Carousel.Item key={items.product_id}>
-            <Link to={`/Details/${items.product_id}`}>
-              <img
-                className="d-block w-100"
-                src={items.product_images}
-                alt={items.product_name}  height="500px" width="500px"
-              />
-            </Link>
-            {/* <Carousel.Caption className="d-none d-md-block">
-              <h3 style={{color:"red"}}>{items.product_name}</h3>
-            </Carousel.Caption> */}
-          </Carousel.Item>
-        ))}
-      </Carousel><br></br>
+        
+        {/* <Carousel 
+
+interval={1500}
+pause="hover"
+wrap={true}
+onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
+>
+{shoesdata.map((items) => (
+  <Carousel.Item key={items.product_id}>
+    <Link to={`/Details/${items.product_id}`}>
+      <img
+        className="d-block w-100"
+        src={items.product_images}
+        alt={items.product_name}  height="500px" width="500px"
+      />
+    </Link>
+     <Carousel.Caption className="d-none d-md-block">
+      <h3 style={{color:"red"}}>{items.product_name}</h3>
+    </Carousel.Caption> 
+  </Carousel.Item>
+))}
+</Carousel><br></br> */}
+      
+       
         
         <div className="App2">
         {shoesdata.map((shoes)=>(
@@ -47,7 +51,7 @@ function Home() {
                 <img src={shoes.product_images} alt={shoes.product_name} height="300px" width="300px"/>
                 <h3 style={{textAlign:"left"}}>{shoes.product_name}</h3>
                 <h3 style={{textAlign:"left"}}>₹{shoes.price}</h3>
-                {/* <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div> */}
+                 <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div> 
             </div>
         ))}
 

@@ -5,11 +5,16 @@ import Mobile from './pages/mobiles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './pages/nav';
 import Home from './pages/Home';
+// import Login from './pages/login';
+
+import Login from './pages/login1';
 import Search from './pages/Search';
 import Details from './pages/Details';
 import Clothes from './pages/clothes';
+
+import Unisex from './pages/unisex';
 import Women from './pages/Women';
-import './pages/all.css';
+// import './pages/all.css';
 
 function App() {
   return (
@@ -25,10 +30,18 @@ function App() {
           <Route path="/shoes" element={<Shoes />} />
           <Route path="/mobiles" element={<Mobile />} />
           <Route path="/Men" element={<Clothes />} />
+
+          <Route path="/unisex" element={<Unisex />} />
           <Route path="/women" element={<Women />} />
           <Route path="/*" element={<h1>error</h1>} />
+          <Route path="/login1" element={<Login />} />
 
-        </Routes></Router>
+          {/* <Route path="/login1" element={<Login />} /> */}
+        </Routes>
+        
+       
+        </Router>
+       
     </div>
   );
 }

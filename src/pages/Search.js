@@ -9,7 +9,7 @@ function Search() {
 
     useEffect(()=>{
         axios
-        .get(`http://localhost:3000/api/data?s=${searchtext}`)
+        .get(`http://localhost:3000/api/data?sub=${searchtext}`)
         .then((response)=>{
             setSearchdata(response.data);
         })

@@ -1,0 +1,16 @@
+  .nav_links li a{
+text-align: left;
+
+    text-decoration: none;
+    color: black;
+  }
+  .nav_links{
+display: flex;
+list-style: none;
+justify-content: center;
+
+  }
+h1
+{
+    font-family: 'Playfair Display', serif;
+}
