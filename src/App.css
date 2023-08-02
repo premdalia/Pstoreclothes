@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font-family: Playfair Display,serif;
 
   background-color: rgb(255, 255, 255);
 }
@@ -68,12 +67,13 @@
   background-color: white;
 }
 .card{
-  border: 2px solid;
+  border: 0px solid;
   box-shadow: 0px 0px 15px 0.5px #888888;
   display: flex;
   flex-direction:column;
   margin: 25px;
   transition: 0.5s;
+  padding: 20px;
 
 }
 .card:hover{

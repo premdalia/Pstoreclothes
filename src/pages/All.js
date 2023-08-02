@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import '../App.css';
 import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
-function Home() {
+function ALL() {
     const [shoesdata,setShoesdata]=useState([]);
 
     useEffect(()=>{
@@ -46,24 +46,17 @@ onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
        
         
         <div className="App2">
-        {shoesdata.slice(0, 8).map((shoes)=>(
+        {shoesdata.map((shoes)=>(
             <div className="card" key={shoes.product_id}>
-              
-              <Link to={`Details/${shoes.product_id}`} className="btn">
                 <img src={shoes.product_images} alt={shoes.product_name} height="300px" width="300px"/>
                 <h3 style={{textAlign:"left"}}>{shoes.product_name}</h3>
                 <h3 style={{textAlign:"left"}}>₹{shoes.price}</h3>
-                </Link>
-
-
-                 {/* <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div>  */}
+                 <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div> 
             </div>
         ))}
 
-        </div>
-      <Link to="/ALL" ><button type="submit">Show more...</button></Link>
-        </>
+        </div></>
     );
     
 }
-export default Home;
+export default ALL;

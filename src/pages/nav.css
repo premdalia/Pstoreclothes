@@ -1,19 +1,60 @@
-  .nav_links li a{
-text-align: left;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
-    text-decoration: none;
-    color: black;
-  }
-  .nav_links{
-display: flex;
-list-style: none;
-justify-content: center;
+*{
+  font-family: 'Playfair Display', serif;
+  /* font-style: italic; */
+  color: black;
+margin: 0px;
+}
 
-  }
-h1
-{
-    font-family: 'Playfair Display', serif;
+
+
+.logo{
+
+    font-weight: 600;
+    font-style: italic;
+    font-size: 50px;
+
 }
-h2{
-    
+
+.nav_Navlinks li a {
+  text-align: left;
+  font-weight: 600;
+
+  text-decoration: none;
+  color: black;
+  margin:50px;
+  /* box-shadow: 10px 5px #bab7b788; */
+  font-size: 25px;
+
 }
+.nav_Navlinks li a:hover{
+    box-shadow: 10px 5px #bab7b788;
+
+}
+.nav_Navlinks li a.active {
+  color: #ff0000;}
+/* .nav_Navlinks li a:visited{
+    box-shadow: 10px 5px #bab7b788;
+    color: blue;
+
+} */
+
+.nav_Navlinks {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  background-color: rgb(198, 194, 194);
+  height: 60px;
+  padding: 10px;
+  margin: auto;
+  
+}
+.button{
+  display: absolute;
+  margin:auto
+}
+
+/* .active{
+ color:rgb(232, 47, 47)
+} */

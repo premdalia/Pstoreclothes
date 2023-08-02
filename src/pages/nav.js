@@ -1,8 +1,7 @@
 // nav.js
 import React, { useState } from "react";
 import './nav.css';
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 function Nav() {
   const [ searchtext, setSearchinput ] = useState("");
   function sendvalue(e){
@@ -17,38 +16,38 @@ function Nav() {
   return (
     <>
     <div className="header">
-      <h1 style={{ fontFamily:"Playfair Display"}}>P_Store</h1>
+      <h1 className="logo">P_Store</h1>
 </div>
        <div>
       <form className="search">
         <input  style={{height:"40px" ,width:"600px"
-        }} className="mainsearch" type="search" name="search" value={searchtext} onChange={sendvalue}/>
-        <Link to={`/Search/${searchtext}`}><button className="but" style={{height:"40px" ,width:"80px"
-        }} type="submit">Search</button></Link>
+        }} className="mainsearch" type="search" name="search" value={searchtext} onChange={sendvalue} placeholder="Enter Category"/>
+        <NavLink to={`/Search/${searchtext}`}><button className="but" style={{height:"40px" ,width:"80px"
+        }} type="submit">Search</button></NavLink>
       </form><br />
       
      <div style={{ textDecoration: "none"}}>
      <nav>
-     <ul className="nav_links" >
+     <ul className="nav_Navlinks" >
       {/* style={{ listStyle: "none",textDecoration: "none"}} */}
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             {/* <li>
-              <Link to="/shoes">Shoes</Link>
+              <NavLink to="/shoes">Shoes</NavLink>
             </li>
             <li>
-              <Link to="/mobiles">Mobiles</Link>
+              <NavLink to="/mobiles">Mobiles</NavLink>
             </li> */}
             <li>
-              <Link to="/Men">Men</Link>
+              <NavLink to="/Men">Men</NavLink>
             </li>
             <li>
-              <Link to="/Women">Women</Link>
+              <NavLink to="/Women">Women</NavLink>
             </li>
          
             <li>
-              <Link to="/unisex">Unisex</Link>
+              <NavLink to="/unisex">Unisex</NavLink>
             </li>
             <li>
              <button onClick={logout}> Log Out</button>

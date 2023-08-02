@@ -14,6 +14,7 @@ import Clothes from './pages/clothes';
 
 import Unisex from './pages/unisex';
 import Women from './pages/Women';
+import ALL from './pages/All';
 // import './pages/all.css';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <Router>
 
         <Nav />
-        <hr></hr>
+        {/* <hr></hr> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Search/:searchtext" element={<Search />} />
@@ -30,6 +31,7 @@ function App() {
           <Route path="/shoes" element={<Shoes />} />
           <Route path="/mobiles" element={<Mobile />} />
           <Route path="/Men" element={<Clothes />} />
+          <Route path="/ALL" element={<ALL />} />
 
           <Route path="/unisex" element={<Unisex />} />
           <Route path="/women" element={<Women />} />
