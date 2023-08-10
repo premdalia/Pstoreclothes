@@ -53,6 +53,7 @@ function Nav() {
              <button onClick={logout}> Log Out</button>
             </li>
           </ul>
+       
           </nav>
      </div>
           

@@ -21,7 +21,7 @@ function Women() {
         {clothesdata.map((clothes)=>(
             <div className="card" key={clothes.product_id}>
 
-<Link to={`../Details/${clothes.product_id}`} className="btn">
+<Link to={`/Details/${clothes.product_id}`} className="btn">
 
                 <img src={clothes.product_images} alt={clothes.product_name} height="300px" width="300px"/>
                 <h3 style={{textAlign:"left"}}>{clothes.product_name}</h3>

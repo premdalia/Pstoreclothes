@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import '../App.css';
+// import '../App.css';
+import './Details.css'
 function Details() {
 
     const { productid } = useParams();
@@ -25,8 +26,9 @@ function Details() {
                <div className="dproductdetails">
                <h3 style={{textAlign:"left"}}>{details.product_name}</h3>
                 <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
+                </div>
                </div>
-            </div>
+            
         </>
 
     );

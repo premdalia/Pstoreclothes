@@ -1,69 +1,77 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
 import '../App.css';
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Carousel } from "react-bootstrap";
-function Home() {
-    const [shoesdata,setShoesdata]=useState([]);
 
-    useEffect(()=>{
-        axios
-        .get("http://localhost:3000/api/data?sub=clothes")
-        .then((response)=>{
-            setShoesdata(response.data);
-        })
-    },[])
-    if(!shoesdata){
-        return <h1>Loading....</h1>
+function Home() {
+  const [shoesdata, setShoesdata] = useState([]);
+  const [searchtext, setSearchtext] = useState("");
+  const [uniqueCompanies, setUniqueCompanies] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/data?sub=clothes")
+      .then((response) => {
+        setShoesdata(response.data);
+        const companies = [...new Set(response.data.map(item => item.company_name))];
+        setUniqueCompanies(companies);
+      });
+  }, []);
+
+  useEffect(() => {
+    let url = "http://localhost:3000/api/data?sub=clothes";
+
+    if (searchtext && searchtext !== " ") {
+      url += `&cn=${searchtext}`;
     }
 
-    return(
-        <>
-        
-        {/* <Carousel 
+    axios.get(url)
+      .then((response) => {
+        setShoesdata(response.data);
+      });
+  }, [searchtext]);
 
-interval={1500}
-pause="hover"
-wrap={true}
-onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
->
-{shoesdata.map((items) => (
-  <Carousel.Item key={items.product_id}>
-    <Link to={`/Details/${items.product_id}`}>
-      <img
-        className="d-block w-100"
-        src={items.product_images}
-        alt={items.product_name}  height="500px" width="500px"
-      />
-    </Link>
-     <Carousel.Caption className="d-none d-md-block">
-      <h3 style={{color:"red"}}>{items.product_name}</h3>
-    </Carousel.Caption> 
-  </Carousel.Item>
-))}
-</Carousel><br></br> */}
-      
-       
-        
-        <div className="App2">
-        {shoesdata.slice(0, 8).map((shoes)=>(
-            <div className="card" key={shoes.product_id}>
-              
-              <Link to={`Details/${shoes.product_id}`} className="btn">
-                <img src={shoes.product_images} alt={shoes.product_name} height="300px" width="300px"/>
-                <h3 style={{textAlign:"left"}}>{shoes.product_name}</h3>
-                <h3 style={{textAlign:"left"}}>₹{shoes.price}</h3>
-                </Link>
+  if (!shoesdata) {
+    return <h1>Loading....</h1>;
+  }
 
+  function onChange(e) {
+    setSearchtext(e.target.value);
+  }
 
-                 {/* <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div>  */}
-            </div>
+  return (
+    <>
+      <div>
+        <select
+          className="dropdown"
+          value={searchtext}
+          onChange={onChange} 
+        >
+          <option>Select Brand</option>
+          <option value=" ">All</option>
+          {uniqueCompanies.map((company) => (
+            <option key={company} value={company}>
+              {company}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="App2">
+        {shoesdata.slice(0, 8).map((shoes) => (
+          <div className="card" key={shoes.product_id}>
+            <Link to={`Details/${shoes.product_id}`} className="btn">
+              <img src={shoes.product_images} alt={shoes.product_name} height="300px" width="300px" />
+              <h3 style={{ textAlign: "left" }}>{shoes.product_name}</h3>
+              <h3 style={{ textAlign: "left" }}>₹{shoes.price}</h3>
+            </Link>
+
+<button type="submit">Add to Cart</button>
+          </div>
         ))}
-
-        </div>
-      <Link to="/ALL" ><button type="submit">Show more...</button></Link>
-        </>
-    );
-    
+      </div>
+      <Link to="/ALL"><button type="submit">Show more...</button></Link>
+    </>
+  );
 }
+
 export default Home;
