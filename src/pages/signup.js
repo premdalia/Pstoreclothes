@@ -24,6 +24,7 @@ function Signup() {
       alert('Account created successfully!');
       navigate('/');
     } catch (error) {
+        alert(""+error.response.data.msg)
       console.error('Error registering:', error.response.data.msg);
     }
   };

@@ -55,6 +55,9 @@ function Nav() {
             <li>
               <NavLink to="/unisex">Unisex</NavLink>
             </li>
+            <li>
+              <NavLink to="/Cart">Cart</NavLink>
+            </li>
             {isAuthenticated ? (
         // Show Logout button when user is authenticated
         <button type="submit" onClick={handleLogout}>Logout</button>
@@ -66,9 +69,7 @@ function Nav() {
         </>
       )}
 
-            <li>
-              <NavLink to="/Cart">Cart</NavLink>
-            </li>
+           
 
             {/* <li>
              <button onClick={logout}> Log Out</button>
