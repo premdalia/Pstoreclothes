@@ -1,18 +1,24 @@
 // nav.js
 import React, { useState } from "react";
 import './nav.css';
-import { NavLink } from "react-router-dom";
+import { NavLink,Link,useNavigate } from "react-router-dom";
 function Nav() {
   const [ searchtext, setSearchinput ] = useState("");
   function sendvalue(e){
     setSearchinput(e.target.value);}
 
-
-
-    const logout = () => {
-      localStorage.clear();
-      window.location.reload();
+    const isAuthenticated = !!localStorage.getItem('token');
+    const navigate = useNavigate();
+  
+    const handleLogout = () => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      
+      navigate('/');
+      alert("you are logout")
     };
+
+    
   return (
     <>
     <div className="header">
@@ -49,9 +55,24 @@ function Nav() {
             <li>
               <NavLink to="/unisex">Unisex</NavLink>
             </li>
+            {isAuthenticated ? (
+        // Show Logout button when user is authenticated
+        <button type="submit" onClick={handleLogout}>Logout</button>
+      ) : (
+        // Show Register and Sign In buttons when user is not authenticated
+        <>
+          <Link to="/signup"><button type="submit">Register</button></Link>
+          <Link to="/signin"><button type="submit">Sign In</button></Link>
+        </>
+      )}
+
             <li>
-             <button onClick={logout}> Log Out</button>
+              <NavLink to="/Cart">Cart</NavLink>
             </li>
+
+            {/* <li>
+             <button onClick={logout}> Log Out</button>
+            </li> */}
           </ul>
        
           </nav>

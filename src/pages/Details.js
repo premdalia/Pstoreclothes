@@ -15,6 +15,21 @@ function Details() {
             setDetails(response.data);
         })
     }, [productid] );
+
+
+    const addToCart = () => {
+        // Logic to add the current product to the cart
+        // You can use local storage or state management library for this
+        // For simplicity, let's assume you're using local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(details);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert("Product add successfully in cart");
+}
+
+
+
+
     if (!details) {
         return <h1>Loading...</h1>
     }
@@ -26,6 +41,10 @@ function Details() {
                <div className="dproductdetails">
                <h3 style={{textAlign:"left"}}>{details.product_name}</h3>
                 <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
+                <button onClick={addToCart}>Add to Cart</button>
+
+
+
                 </div>
                </div>
             
