@@ -48,10 +48,14 @@ onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
         <div className="App2">
         {shoesdata.map((shoes)=>(
             <div className="card" key={shoes.product_id}>
+              {/* <Link to={"/Details/${shoes.}"}> */}
+              <Link to={`/Details/${shoes.product_id}`} className="btn">
+
                 <img src={shoes.product_images} alt={shoes.product_name} height="300px" width="300px"/>
                 <h3 style={{textAlign:"left"}}>{shoes.product_name}</h3>
                 <h3 style={{textAlign:"left"}}>₹{shoes.price}</h3>
-                 <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div> 
+                 {/* <div className="btn"><Link to={`Details/${shoes.product_id}`}><button type="submit">More details</button></Link></div> */}
+                  </Link>
             </div>
         ))}
 

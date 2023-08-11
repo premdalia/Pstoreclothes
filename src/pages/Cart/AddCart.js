@@ -72,6 +72,9 @@ function Cart() {
             ) : (
                 
                 <div >
+                      <div className="Total">
+                            <span>Total Price: ₹{getTotalPrice()}</span>
+                        </div>
                         {cartItems.map((item, index) => (
                             <div className="cartitem" key={index}>
                                 <div className="image"><img src={item.product_images} alt="img" height={"150px"} /></div>
@@ -84,9 +87,9 @@ function Cart() {
                                 </div>
                             </div>
                         ))}
-                        <div className="">
+                        {/* <div className="">
                             <span>Total Price: ₹{getTotalPrice()}</span>
-                        </div>
+                        </div> */}
                  
                 </div>   
             )}

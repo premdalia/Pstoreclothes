@@ -2,6 +2,9 @@ import axios from "axios";
 import '../App.css';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Carousel } from "react-bootstrap";
+
+
 
 function Home() {
   const [shoesdata, setShoesdata] = useState([]);
@@ -41,6 +44,22 @@ function Home() {
   return (
     <>
       <div>
+
+
+      {/* <Carousel
+      interval={1500}
+      pause="hover"
+      wrap // This will make the carousel repeat automatically
+      onSlide={(slideIndex) => console.log(`Active Slide: ${slideIndex}`)}
+    >
+      {offer.map((items) => (
+        <Carousel.Item key={items.id}>
+          <Link to="/clothes">
+            <img className="d-block w-100" src={items.offerimage} alt={`Slide ${items.id}`} />
+          </Link>
+        </Carousel.Item>
+      ))}
+    </Carousel> */}
         <select
           className="dropdown"
           value={searchtext}

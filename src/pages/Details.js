@@ -41,6 +41,7 @@ function Details() {
                     {/* height="300px" width="400px" */}
                <div className="dproductdetails">
                <h3 >{details.product_name}</h3>
+               <p>{details.description}</p>
                 <h3 >₹{details.price}</h3>
                 <button onClick={addToCart}>Add to Cart</button>
 
