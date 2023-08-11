@@ -8,7 +8,7 @@ function ALL() {
 
     useEffect(()=>{
         axios
-        .get("http://localhost:3000/api/data?sub=clothes")
+        .get("https://fluffy-bear-veil.cyclic.app/?sub=clothes")
         .then((response)=>{
             setShoesdata(response.data);
         })

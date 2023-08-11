@@ -5,3 +5,26 @@
 /* .mgsec{
     background-color: blueviolet;
 } */
+
+
+/* Details.css */
+.detailcard {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 100px;
+  }
+  
+  .dproductimage {
+    margin-right: 300px; /* Add margin to the right side */
+  }
+  
+  .dproductimage img {
+    max-height: 300px;
+    max-width: 400px;
+  }
+  
+  .dproductdetails {
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  

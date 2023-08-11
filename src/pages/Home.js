@@ -9,7 +9,7 @@ function Home() {
   const [uniqueCompanies, setUniqueCompanies] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/data?sub=clothes")
+    axios.get("https://fluffy-bear-veil.cyclic.app/?sub=clothes")
       .then((response) => {
         setShoesdata(response.data);
         const companies = [...new Set(response.data.map(item => item.company_name))];
@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    let url = "http://localhost:3000/api/data?sub=clothes";
+    let url = "https://fluffy-bear-veil.cyclic.app/?sub=clothes";
 
     if (searchtext && searchtext !== " ") {
       url += `&cn=${searchtext}`;

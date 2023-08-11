@@ -10,7 +10,7 @@ function Details() {
 
     useEffect(()=>{
         axios
-        .get(`http://localhost:3000/api/data?id=${productid}`)
+        .get(`https://fluffy-bear-veil.cyclic.app/?id=${productid}`)
         .then((response)=>{
             setDetails(response.data);
         })
@@ -37,10 +37,11 @@ function Details() {
         <>
             <div className="detailcard">
             <div className="dproductimage">
-                    <img src={details.product_images} alt={details.product_name} height="300px" width="400px" /></div>
+                    <img src={details.product_images} alt={details.product_name}  /></div>
+                    {/* height="300px" width="400px" */}
                <div className="dproductdetails">
-               <h3 style={{textAlign:"left"}}>{details.product_name}</h3>
-                <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
+               <h3 >{details.product_name}</h3>
+                <h3 >₹{details.price}</h3>
                 <button onClick={addToCart}>Add to Cart</button>
 
 

@@ -7,7 +7,7 @@ function Shoes() {
 
     useEffect(()=>{
         axios
-        .get("http://localhost:3000/api/data?s=shoes")
+        .get("https://fluffy-bear-veil.cyclic.app/?s=shoes")
         .then((response)=>{
             setShoesdata(response.data);
         })

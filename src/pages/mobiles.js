@@ -7,7 +7,7 @@ function Mobile() {
 
     useEffect(()=>{
         axios
-        .get("http://localhost:3000/api/data?s=mobile")
+        .get("https://fluffy-bear-veil.cyclic.app/?s=mobile")
         .then((response)=>{
             setMobiledata(response.data);
         })
