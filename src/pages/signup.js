@@ -14,7 +14,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('fluffy-bear-veilCyclicDB/register', user);
+      const response = await axios.post('https://fluffy-bear-veil.cyclic.app/register', user);
       console.log('Successfully registered!', response.data);
 
       // Save userObj and auth token to localStorage

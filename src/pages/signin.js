@@ -17,7 +17,7 @@ function SignIn() {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('fluffy-bear-veilCyclicDB/login', credentials);
+      const response = await axios.post('https://fluffy-bear-veil.cyclic.app/login', credentials);
 
       if (response && response.data) {
         // Successful sign-in
