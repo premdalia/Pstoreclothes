@@ -14,7 +14,7 @@ import Clothes from './pages/clothes';
 import Unisex from './pages/unisex';
 import Women from './pages/Women';
 import ALL from './pages/All';
-import  Cart  from './pages/Cart/Cart';
+import  Cart  from './pages/Cart/cart';
 import SignIn from './pages/signin';
 import Signup from './pages/signup';
 // import './pages/all.css';
