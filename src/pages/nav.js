@@ -64,7 +64,7 @@ function Nav() {
       ) : (
         // Show Register and Sign In buttons when user is not authenticated
         <>
-          <Link to="/signup"><button type="submit">Register</button></Link>
+          {/* <Link to="/signup"><button type="submit">Register</button></Link> */}
           <Link to="/signin"><button type="submit">Sign In</button></Link>
         </>
       )}

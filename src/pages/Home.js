@@ -84,7 +84,7 @@ function Home() {
               <h3 style={{ textAlign: "left" }}>₹{shoes.price}</h3>
             </Link>
 
-      <Link to="/Cart"><button type="submit">Add to Cart</button></Link>
+      {/* <Link to="/Cart"><button type="submit">Add to Cart</button></Link> */}
           </div>
         ))}
       </div>

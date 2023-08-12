@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link ,useNavigate} from 'react-router-dom';
-
+import './signin.css'
 function Signup() {
   const navigate = useNavigate();
   const [user, setUser] = useState({ username: '', password: '' });
@@ -30,15 +30,15 @@ function Signup() {
   };
 
   return (
-    <form>
-      <h3>Sign Up</h3>
+    <form className='ob'>
+      <h3>Register here</h3>
       <div>
         <label>UserName:</label>
         <input
           type="text"
           name="username"
           value={user.username}
-          placeholder="Username"
+          placeholder="New Username"
           onChange={handleOnChange}
         />
       </div>
@@ -48,13 +48,13 @@ function Signup() {
           type="password"
           name="password"
           value={user.password}
-          placeholder="Enter password"
+          placeholder="Create Password"
           onChange={handleOnChange}
         />
       </div>
       <div>
         <button type="submit" onClick={handleSubmit}>
-          Sign Up
+          Create
         </button>
       </div>
       <p>

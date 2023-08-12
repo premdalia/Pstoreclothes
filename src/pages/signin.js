@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import './signin.css'
 
 function SignIn() {
     const navigate=useNavigate();
@@ -35,31 +37,37 @@ function SignIn() {
   };
 
   return (
-    <form>
+    <form className='ob'>
       <h3>Sign In</h3>
       <div>
-        <label>Username</label>
+        <label>Username</label><br />
         <input
           type="text"
           name="username"
           value={credentials.username}
           onChange={handleOnChange}
+          placeholder='Enter Your ID'
         />
       </div>
       <div>
-        <label>Password</label>
+        <label>Password</label><br />
         <input
           type="password"
           name="password"
           value={credentials.password}
           onChange={handleOnChange}
+          placeholder='Enter Your Password'
         />
       </div>
       <div>
         <button type="submit" onClick={handleSignIn}>
-          Sign In
+          Login
         </button>
       </div>
+      <div>
+      Don't have an account?<Link to="/signup">Click to Register</Link>
+
+      </div> 
     </form>
   );
 }
