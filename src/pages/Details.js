@@ -15,7 +15,10 @@ function Details() {
             setDetails(response.data);
         })
     }, [productid] );
+const goingpur=()=>{
 
+    alert("You are going to purchase..");
+}
 
     const addToCart = () => {
         // Logic to add the current product to the cart
@@ -44,6 +47,7 @@ function Details() {
                <p>{details.description}</p>
                 <h3 >₹{details.price}</h3>
                 <button onClick={addToCart}>Add to Cart</button>
+                <button className="buy"onClick={goingpur}>Buy Now</button>
 
 
 

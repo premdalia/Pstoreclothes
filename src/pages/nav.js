@@ -56,7 +56,7 @@ function Nav() {
               <NavLink to="/unisex">Unisex</NavLink>
             </li>
             <li>
-              <NavLink to="/Cart">Cart</NavLink>
+              <NavLink to="/Cart">Cart🛒</NavLink>
             </li>
             {isAuthenticated ? (
         // Show Logout button when user is authenticated

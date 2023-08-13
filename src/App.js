@@ -17,6 +17,7 @@ import ALL from './pages/All';
 import  Cart  from './pages/Cart/AddCart';
 import SignIn from './pages/signin';
 import Signup from './pages/signup';
+import Footer from './pages/footer/footer';
 // import './pages/all.css';
 
 function App() {
@@ -47,9 +48,10 @@ function App() {
           {/* <Route path="/login1" element={<Login />} /> */}
         </Routes>
         
-       
+       {/* <Footer /> */}
         </Router>
-       
+        <hr></hr>
+       <Footer />
     </div>
   );
 }

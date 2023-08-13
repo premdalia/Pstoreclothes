@@ -19,6 +19,26 @@
   
 }
 
+
+.carousel{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius:15px ;
+  border: 2px solid black;
+  /* width: 98%;
+  margin-left: 0%; */
+
+}
+
+.drop select{
+  /* display: flex;
+  justify-content: center; */
+  margin-right: -1270px;
+  height:30px;
+  width:150px;
+  font-size: 20px;
+  /* border: 30px; */
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
