@@ -1,3 +1,6 @@
+**Watch Video : https://github.com/premdalia/Pstoreclothes/assets/110085335/82126db4-bf73-4f1c-8bdd-0d94fe10de29**
+
+
 **website Link: https://pstoreclothes.vercel.app/**
 
 **Api Link:  https://fluffy-bear-veil.cyclic.app/**
@@ -9,6 +12,9 @@ Website Features:
 
 => Navbar: Navbar contains different categories such as clothes and specifically men,woman,unisex pages.
            Also, It contains searchbar and Logout & Login & signup buttons.
+
+
+
 
 
 => Searchbar: User can search specific items.
